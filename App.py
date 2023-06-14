@@ -63,9 +63,9 @@ def main():
         if excel_file is not None: 
             # Charger le fichier Excel dans un DataFrame pandas
             df = pd.read_excel(excel_file)
-            df= df[df['Source']==['PDS', 'CDS']]
+            df= df[df['Source']==['PDS']&df['Source']==['CDS']]
         else:
-            st.write("Maintenant vous allez pouvoir charger votre fichier excel pour commencer.")  
+            st.write("Charger votre fichier excel pour pouvoir commencer.")  
 
         if page == pages[1]:
             #st.title("RH ART")
