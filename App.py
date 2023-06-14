@@ -63,7 +63,6 @@ def main():
         if excel_file is not None: 
             # Charger le fichier Excel dans un DataFrame pandas
             df = pd.read_excel(excel_file)
-            df['Date'] = pd.to_datetime(df['Date'], format='%d/%m/%Y')
             df = df[df['Date'] > '2022-12-31']
             df = df[(df['Source'] == 'PDS') | (df['Source'] == 'CDS')]
         else:
